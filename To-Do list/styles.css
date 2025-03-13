@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: cornsilk;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-list > li {
+    padding: 20px 70px 20px 10px;
+    border-radius: 10px;
+    background-color: rgba(95, 158, 160, 0.493);
+    margin-bottom: 10px;    
+}
+
+.sub-item-link {
+    text-decoration: none;
+}
+
+.sub-item-link:hover {
+    color: rgb(0, 255, 221);
+    text-decoration: outline;
+}
+
+.sub-item-link:focus {
+    border: 3px solid royalblue;
+    color: aquamarine;
+}
+
+.sub-item-link:active {
+    color: brown;
+}
+
+.sub-item-link:visited {
+    color: brown;
+    text-decoration: underline;
+}
+
+.todo-list > li li {
+    list-style-type: square;
+}
