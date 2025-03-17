@@ -1,0 +1,133 @@
+:root {
+  --margin-input: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+/* for review */
+input:nth-child(1) {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+form > input,
+textarea,
+select,
+button,
+fieldset {
+  margin-top: 0.3rem;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.4rem;
+}
+
+form > input,
+textarea,
+select,
+fieldset {
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.575);
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(250, 253, 235);
+  border-color: rgb(63, 30, 210);/* for review */
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid
+ {
+  border: 1px solid red;
+  border-color: red;/* for review */
+}
+
+input:valid,
+select:valid,
+textarea:valid
+ {
+  border: 1px solid rgb(0, 255, 76);
+  border-color: green;/* for review */
+}
+
+form > label {
+  font-weight: 600;
+  display: block;
+  margin-top: var(--margin-input);
+}
+
+fieldset {
+  margin-top: var(--margin-input);
+  background-color: white;
+  display: flex;
+}
+
+fieldset label {
+  font-size: 1.2rem;
+  padding-left: 0.2rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.radio-group input[type='radio'] {
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 4px;
+  margin-top: 2px;
+  outline: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: rgb(6, 175, 6); /* Цвет круга при выборе */
+  background-color: rgb(6, 175, 6); /* Цвет внутреннего круга */
+  box-shadow: 5px 5px 5px grey;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    color: green;
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 20vh;
+}
+
+legend {
+  font-weight: 600;
+}
+
+button {
+  padding: 0.7rem;
+  background-color: rgb(6, 175, 6);
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: darkslateblue;
+}
+
+.container {
+  width: 50vw;
+  margin: 3rem auto 0 auto;
+  padding: 5rem 1rem;
+  background-color: bisque;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px grey;
+}
+
+

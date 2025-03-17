@@ -1,0 +1,52 @@
+* {
+    font-family: "Fira Sans", sans-serif;
+}
+
+html {
+    background-color: darksalmon;
+}
+
+body {
+    width: 90vw;
+    padding: 3.125rem 0;
+    margin: 0 auto;
+    text-align: center;
+    min-height: calc(100vh - 100px);
+    border: 4mm ridge rgba(211, 220, 50, 0.6);
+    border-radius: 1rem;
+    background: linear-gradient(rgba(0, 0, 255, 0.596), 10%, pink, darksalmon);
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+    list-style-type: circle;
+}
+
+footer {
+    margin-top: 4rem;
+}
+
+section {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 3rem;
+    border: 2px dotted dodgerblue;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+hr {
+    width: 80%;
+}
+
+
+
+.image-header {
+    width: 19.75rem;
+    height: 16.635rem;
+}
