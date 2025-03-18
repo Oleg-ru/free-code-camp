@@ -1,0 +1,42 @@
+body {
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+.color-grid {
+    display: grid; /* Включаем Grid */
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок с равной шириной */
+    gap: 0.5rem; /* Расстояние между блоками */
+    padding: 20px; /* Отступы вокруг контейнера */
+    max-width: 90vw;
+}
+
+.color-box {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 10px 5px 5px rgba(34, 33, 33, 0.411);
+}
+
+.color1 {
+    background-color: #F1A4FF;
+}
+
+.color2 {
+    background-color: rgb(0, 255, 21);    
+}
+
+.color3 {
+    background-color: chocolate;    
+}
+
+.color4 {
+    background-color: hsl(270deg, 90%, 50%);    
+}
+
+.color5 {
+    background-color: red;    
+}
