@@ -1,59 +1,112 @@
-tr[class="read"] {
-    background-image: linear-gradient(rgb(87, 87, 87), rgb(148, 146, 146), rgb(160, 122, 115));
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-tr[class="to-read"] {
-    background-image: linear-gradient(rgb(197, 88, 88), rgb(80, 107, 231), rgb(179, 118, 107));
+html {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCAxMjAgODAiPgo8c3R5bGU+CiAgLmJvb2stYmcsIC5ib29rLXBhZ2UgeyBmaWxsOiAjZjVmZWVmOyBzdHJva2U6ICNkNmQ1ZGM7IHN0cm9rZS13aWR0aDogMC41OyB9CiAgLmJvb2stc3BpbmUgeyBmaWxsOiAjZTVjY2FmOyBzdHJva2U6ICNiNzlhYTY7IH0KPC9zdHlsZT4KPHJlY3QgY2xhc3M9ImJvb2stYmciIHdpZHRoPSIxMjAiIGhlaWdodD0iODAiLz4KPCEtLSBSZXBlYXRpbmcgYm9va3MgLS0+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwLCAyMCkiPgo8cmVjdCBjbGFzcz0iYm9vay1zcGluZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjgiIGhlaWdodD0iNDAiIHJ4PSIxIi8+CjxyZWN0IGNsYXNzPSJib29rLXBhZ2UiIHg9IjgiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSI0MCIvPgo8L2c+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwLCAxNSkiPgo8cmVjdCBjbGFzcz0iYm9vay1zcGluZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjgiIGhlaWdodD0iMzUiIHJ4PSIxIi8+CjxyZWN0IGNsYXNzPSJib29rLXBhZ2UiIHg9IjgiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIzNSIvPgo8L2c+CjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDgwLCAyNSkiPgo8cmVjdCBjbGFzcz0iYm9vay1zcGluZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjgiIGhlaWdodD0iMzAiIHJ4PSIxIi8+CjxyZWN0IGNsYXNzPSJib29rLXBhZ2UiIHg9IjgiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIzMCIvPgo8L2c+Cjwvc3ZnPg==');
+  background-repeat: repeat;
+  background-size: 120px 80px;
+  opacity: 0.9;
 }
 
-tr[class="in-progress"] {
-    background-image: linear-gradient(rgb(65, 95, 78), rgb(236, 236, 74), rgb(199, 228, 36));
+h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+table {
+  margin: 0 auto;
+  width: 90vw;
+  border-collapse: collapse;
+}
+
+th,
+tr,
+td:not(span) {
+  border: 2px solid black;
+  padding-left: 10px;
+  vertical-align: baseline;
+}
+
+th {
+  font-size: 1.2rem;
+  background-color: lightsteelblue;
+}
+
+tr[class='read'] {
+  background-image: linear-gradient(
+    rgb(87, 87, 87),
+    rgb(148, 146, 146),
+    rgb(160, 122, 115)
+  );
+}
+
+tr[class='to-read'] {
+  background-image: linear-gradient(
+    rgb(197, 88, 88),
+    rgb(80, 107, 231),
+    rgb(179, 118, 107)
+  );
+}
+
+tr[class='in-progress'] {
+  background-image: linear-gradient(
+    rgb(103, 128, 59),
+    rgb(236, 236, 74),
+    rgb(199, 228, 36)
+  );
 }
 
 span {
-    display: inline-block;
+  display: inline-block;
 }
 
-tr[class="to-read"] span[class="status"] {
-    border: 3px solid lawngreen;
-    background-image: radial-gradient(green, tomato);
+tr[class='to-read'] span[class='status'] {
+  border: 3px solid lawngreen;
+  background-image: radial-gradient(green, tomato);
 }
 
-
-tr[class="read"] span[class="status"] {
-    border: 3px solid rgb(5, 5, 5);
-    background-image: radial-gradient(rgb(112, 111, 111), rgb(92, 91, 91));
+tr[class='read'] span[class='status'] {
+  border: 3px solid rgb(5, 5, 5);
+  background-image: radial-gradient(rgb(112, 111, 111), rgb(92, 91, 91));
 }
 
-
-tr[class="in-progress"] span[class="status"] {
-    border: 3px solid rgb(226, 9, 9);
-    background-image: radial-gradient(rgb(182, 103, 88), tomato);
+tr[class='in-progress'] span[class='status'] {
+  border: 3px solid rgb(226, 9, 9);
+  background-image: radial-gradient(rgb(182, 103, 88), tomato);
 }
 
-span[class="status"], span[class^="rate"] {
-    width: 100px;
-    height: 10px;
-    padding: 1rem;
+span[class='status'],
+span[class^='rate'] {
+  width: 90%;
+  height: auto;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 0.7rem;
 }
 
-span[class^="rate"] > span {
-    border: 1px dashed cyan;
-    border-radius: 45px;
-    margin: 5px;
-    height: 10px;
-    width: 10px;
-    background-color: wheat;
+span[class^='rate'] > span {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 45px;
+  margin: 5px;
+  height: 25px;
+  width: 25px;
+  background-color: wheat;
 }
 
-span[class~="one"] :first-child {
-    background-image: linear-gradient(rgb(233, 233, 233), green);
+span[class~='one'] :first-child {
+  background-image: linear-gradient(rgb(233, 233, 233), green);
 }
 
-span[class~="two"] :nth-child(1), span[class~="two"] :nth-child(2) {
-    background-image: linear-gradient(to right, #ff0000, #0000ff);
+span[class~='two'] :nth-child(1),
+span[class~='two'] :nth-child(2) {
+  background-image: linear-gradient(to right, #ff0000, #0000ff);
 }
 
-span[class~="three"] span {
-    background-image: linear-gradient(to right, #00ff00, #ffff00);
-  }
+span[class~='three'] span {
+  background-image: linear-gradient(to right, #00ff00, #ffff00);
+}
