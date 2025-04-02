@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="nav-container">
+                <header>
+                    <h1>Гайд по grid</h1>
+                </header>
+                <ul>
+                    <li><a href="#What_are_grids?" class="nav-link">What are grids?</a></li>
+                    <li><a href="#Basic_terms" class="nav-link">Basic terms</a></li>
+                    <li><a href="#Grid_Container_Properties" class="nav-link">Grid Container Properties</a></li>
+                    <li><a href="#Grid_Element_Properties" class="nav-link">Grid Element Properties</a></li>
+                    <li><a href="#Special_functions_and_keywords" class="nav-link">Special functions and keywords</a></li>
+                    <li><a href="#What_did_we_learn?" class="nav-link">What did we learn?</a></li>
+                    <li><a href="#Source" class="nav-link">Source</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="What_are_grids?">
+                <header>
+                    <h2>What are grids?</h2>
+                </header>
+                <p>CSS Grid Layout (спецификация) или просто гриды — это удобная технология для раскладки элементов на
+                    веб-страницах. В отличие от флексбоксов, одновременно работающих только с одним измерением, гриды
+                    дают
+                    возможность работать одновременно с двумя: горизонталью и вертикалью.</p>
+                <p>На заре веба для создания раскладки поинтереснее одноколоночной часто использовались таблицы. Но
+                    проблема
+                    была в том, что таблицы были сделаны не для этого. Даже если отбросить семантическую нагруженность
+                    этого
+                    элемента, отдельные свойства для стилизации были крайне неудобными. По сути, это был костыль за
+                    неимением более удобных способов. Гриды же изначально были придуманы и реализованы как инструмент
+                    для
+                    создания раскладки.</p>
+                <p>Принцип работы гридов чем-то похож на таблицы. Вместо работы только с рядами или только с колонками с
+                    помощью гридов можно работать с так называемыми грид-ячейками, позиционируя элементы по вертикали и
+                    горизонтали одновременно.</p>
+            </section>
+            <section class="main-section" id="Basic_terms">
+                <header>
+                    <h2>Basic terms</h2>
+                </header>
+                <p>Грид-контейнер: родительский элемент, к которому применяется свойство <code>display: grid</code>.</p>
+                <p>Грид-элемент: дочерний элемент, прямой потомок грид-контейнера. Подчиняется правилам раскладки
+                    гридов.
+                </p>
+                <p>Грид-линия: разделительная линия, формирующая структуру грида. Может быть как вертикальной
+                    (грид-линия
+                    колонки), так и горизонтальной (грид-линия ряда). Располагается по обе стороны от колонки или ряда.
+                    Используется для привязки грид-элементов.</p>
+                <p>Грид-ячейка: пространство между соседними грид-линиями. Единица грид-сетки.</p>
+                <p>Грид-полоса: пространство между двумя соседними грид-линиями. Может быть проще думать о грид-полосе
+                    как о
+                    ряде или колонке.</p>
+                <p>Грид-область: область, ограниченная четырьмя грид-линиями. Может состоять из любого количества ячеек
+                    как
+                    по горизонтали, так и по вертикали.</p>
+            </section>
+            <section class="main-section" id="Grid_Container_Properties">
+                <header>
+                    <h2>Grid Container Properties</h2>
+                </header>
+                <code>.container {
+                display: grid;
+            }</code>
+                <p>Если элементу задано свойство <code>display</code> со значением <code>grid</code>, то такой элемент
+                    становится грид-контейнером.
+                    Дочерние элементы этого контейнера начинают подчиняться правилам грид-раскладки. Снаружи
+                    грид-контейнер
+                    ведёт себя как блок.</p>
+                <code>.container {
+                display: inline-grid;
+              }</code>
+                <p>Практически аналогичное предыдущему значению — за тем исключением, что снаружи грид-контейнер,
+                    созданный
+                    с помощью inline-grid, будет вести себя как строчный элемент.</p>
+            </section>
+            <section class="main-section" id="Grid_Element_Properties">
+                <header>
+                    <h2>Grid Element Properties</h2>
+                </header>
+                <p>Важное замечание: свойства <code>float</code>, <code>display: inline-block</code>,
+                    <code>display: table-cell</code>, <code>vertical-align</code> и <code>column-*</code>
+                    не дают никакого эффекта, когда применяются к грид-элементам.
+                </p>
+            </section>
+            <section class="main-section" id="Special_functions_and_keywords">
+                <header>
+                    <h2>Special functions and keywords</h2>
+                </header>
+                <p>Когда вы задаёте размеры колонкам и рядам, вам доступны не только давно известные единицы измерения
+                    (<code>px,
+                vw, rem, %</code> и так далее), но и очень крутые ключевые слова
+                    <code>min-content, max-content и auto</code>. И уже
+                    упомянутые единицы измерения <code>fr</code>.
+                </p>
+                <p>Гриды подарили нам ещё одну волшебную функцию, позволяющую одновременно задавать минимальный и
+                    максимальный размер — <code>minmax()</code>. Например, в случае записи
+                    <code>grid-template-columns: minmax(200px, 1fr);</code>
+                    колонка займёт 1 часть свободного пространства грид-контейнера, но не меньше 200 пикселей.
+                </p>
+                <p>Ещё одна полезная функция, появившаяся в гридах, это <code>repeat()</code>. Сэкономит вам кучу лишних
+                    букв и времени.</p>
+            </section>
+            <section class="main-section" id="What_did_we_learn?">
+                <header>
+                    <h2>What did we learn?</h2>
+                </header>
+                <ul>
+                    <li>
+                        <p>Что такое гриды?</p>
+                    </li>
+                    <li>
+                        <p>Основные термины</p>
+                    </li>
+                    <li>
+                        <p>Свойства грид-контейнера</p>
+                    </li>
+                    <li>
+                        <p>Свойства грид-элементов</p>
+                    </li>
+                    <li>
+                        <p>Специальные функции и ключевые слова</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-section" id="Source">
+                <header><h2>Source</h2></header>
+                <p>Источник <a href="https://doka.guide" target="_blank">doka.guide</a></p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
