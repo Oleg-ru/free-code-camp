@@ -1,0 +1,136 @@
+:root {
+  --color0: #fff;
+  --color1: #0f0;
+  --color2: #00e600;
+  --color3: #00d200;
+  --color4: #00be00;
+  --color5: #0a0;
+  --solid-border: 1px solid black;
+  --dashed-border: 1px dashed black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+table {
+  /* margin: 6rem auto 0; */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  padding: 1rem;
+}
+
+td {
+  border-left: var(--solid-border);
+  border-right: var(--solid-border);
+}
+
+tbody > tr > th {
+  position: relative;
+  bottom: 25px;
+}
+
+/* Разделитель между получасами */
+tbody tr:nth-child(2n + 1) :not(th) {
+  border-top: var(--solid-border);
+  padding: 1rem;
+}
+
+/* Разделитель между часами */
+tbody tr:nth-child(odd) :not(th) {
+  border-bottom: var(--dashed-border);
+}
+
+.available-0 {
+  background-color: var(--color0);
+}
+
+.available-1 {
+  background-color: var(--color1);
+}
+
+.available-2 {
+  background-color: var(--color2);
+}
+
+.available-3 {
+  background-color: var(--color3);
+}
+
+.available-4 {
+  background-color: var(--color4);
+}
+
+.available-5 {
+  background-color: var(--color5);
+}
+
+#legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: ". header ." "num0 gradient num5";
+}
+
+.legend-header {
+    text-align: center;
+    grid-area: header;
+}
+
+.num0 {
+    display: block;
+    grid-area: num0;
+    margin-left: auto;
+    padding-right: 5px;
+}
+
+.num5 {
+    padding-left: 5px;
+    display: block;
+    grid-area: num5;
+}
+
+
+
+
+
+#legend-gradient {
+  grid-area: gradient;
+  border: 1px solid black;
+  background-image: linear-gradient(
+    90deg,
+    var(--color0) 0% 16.6%,
+    var(--color1) 16.6% 33.2%,
+    var(--color2) 33.2% 49.8%,
+    var(--color3) 49.8% 66.4%,
+    var(--color4) 66.4% 83%,
+    var(--color5) 83% 100%
+  );
+  /* for test
+     background-image: linear-gradient(
+    90deg,
+    var(--color0) 0% 17%,
+    var(--color1) 17% 34%,
+    var(--color2) 34% 50%,
+    var(--color3) 50% 67%,
+    var(--color4) 67% 83%,
+    var(--color5) 83% 100%
+  ); */
+  width: 10rem;
+  height: 2rem;
+}
+
+/* for test */
+/* .sharp td {
+    border-bottom: var(--solid-border);
+}
+
+.half td {
+    border-bottom: var(--dashed-border);
+} */
