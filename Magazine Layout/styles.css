@@ -1,0 +1,81 @@
+:root {
+  --shadow: 5px 5px 5px gray;
+  --border-radius-1: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.magazine-cover {
+  width: 98vw;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+    'title title title' auto
+    'feature-article feature-article cover-image' 1fr
+    'small-article1 small-article2 cover-image' 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+section {
+  background-color: antiquewhite;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-1);
+}
+
+.title {
+  background-color: cadetblue;
+  text-align: center;
+  grid-area: title;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-1);
+}
+
+.feature-article {
+  grid-area: feature-article;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
+
+.cover-image {
+  text-align: center;
+  grid-area: cover-image;
+}
+
+/* Comment two selector for test */
+@media (width <= 700px) {
+  .magazine-cover {
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'title title '
+      'feature-article cover-image'
+      'small-article1 small-article1'
+      'small-article2 small-article2';
+  }
+}
+
+@media (width <= 500px) {
+  .magazine-cover {
+    grid-template-rows: auto auto auto auto 1fr;
+    grid-template-areas:
+      'title '
+      'feature-article'
+      'cover-image'
+      'small-article1'
+      'small-article2';
+  }
+}
