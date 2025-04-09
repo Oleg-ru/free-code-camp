@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <img src="https://img.icons8.com/?size=100&id=bcmgDbO85ITr&format=png&color=000000" alt="logo" id="header-img">
+        <nav id="nav-bar">
+            <ul class="nav-list">
+                <li><a href="#section-content" class="nav-link">Описание</a></li>
+                <li><a href="#section-tarif" class="nav-link">Тарифы</a></li>
+                <li><a href="#section-footer" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="section-content">Frontend-Наставничество: Помогу выйти на новый уровень </h1>
+        <form action="https://www.freecodecamp.org/email-submit" id="form">
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <button type="submit" id="submit">Отправить заявку</button>
+        </form>
+        <section class="content">
+            <h2>Ты столкнулся с этим?</h2>
+            <h3>Застрял на сложных темах (React, TypeScript, архитектура)?</h3>
+            <p>Работал с крупными проектами и знаю, как избегать «учебных» ошибок.</p>
+            <h3>Нужен структурированный путь роста во фронтенде?</h3>
+            <p>Программа под твой уровень и цели: от основ JS до продвинутой оптимизации.</p>
+            <h3>Хочешь код-ревью и разбор ошибок от опытного разработчика?
+                Я помогу разобраться, поставлю правильное мышление и дам только нужные знания.</h3>
+            <p>Разбираем реальные задачи, твой код и кейсы из работы.</p>
+            <iframe id="video" src="https://www.youtube.com/embed/HctVX-ThRG8?si=HNvPNkeJx63sYTwZ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section>
+            <h2 class="mentor-head" id="section-tarif">Варианты наставничества</h2>
+            <div class="order-forms">
+                <div>
+                    <h3>Стартовый («Разберись с основами»)</h3>
+                    <p class="cost">100$ / месяц.</p>
+                    <ul>
+                        <li>Консультации 2 раза в неделю (30 мин).</li>
+                        <li>Разбор твоего кода и домашних заданий.</li>
+                        <li>Чек-листы и материалы.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Продвинутый («Глубже в разработку»)</h3>
+                    <p class="cost">250$ / месяц.</p>
+                    <ul>
+                        <li>4 встречи в неделю (1 час).</li>
+                        <li>Работа над проектом + разбор собеседований.</li>
+                        <li>Помощь с резюме и профилем.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Премиум («Под ключ»)</h3>
+                    <p class="cost">500$ / месяц.</p>
+                    <ul>
+                        <li>Полное сопровождение (чаты/звонки без лимитов).</li>
+                        <li>Совместная работа над коммерческим проектом.</li>
+                        <li>Пожизненный доступ к обновляемым материалам.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer" id="section-footer">
+        <ul class="footer-list-container">
+            <li><a href="#">Кондефициальность</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <p class="copyright">Copyright 2025, Original Frontend</p>
+    </footer>
+</body>
+
+</html>
