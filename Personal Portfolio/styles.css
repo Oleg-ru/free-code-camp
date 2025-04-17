@@ -1,0 +1,344 @@
+:root {
+  --font-color-white: honeydew;
+  --color-red: #ff0700;
+  --border-radius-project: 1rem;
+  --border-image-line: linear-gradient(
+      to right,
+      var(--color-red),
+      #4c10ae,
+      var(--color-red)
+    )
+    1;
+  --border-top-transparent: 6px solid transparent;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-white);
+}
+
+header {
+  width: 100%;
+  height: min-content;
+  position: sticky;
+  top: 0;
+  background-color: #4c10ae;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#navbar a {
+  color: var(--font-color-white);
+  padding: 1.5rem 2rem;
+  display: block;
+}
+
+#navbar a:hover {
+  background-color: #2e0571;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to top left, #3a3d40 0%, #070708 100%);
+}
+
+h1 {
+  color: var(--font-color-white);
+  font-size: 4.5rem;
+  width: 12ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(13);
+}
+
+.container-a p {
+    display: inline-block;
+}
+
+/* 
+    Скрываем текст p изначально с помощью width: 0 и overflow: hidden.
+    Добавляем animation-fill-mode: forwards, чтобы после анимации текст оставался видимым.
+*/
+#welcome-section > p {
+  color: var(--color-red);
+  font-style: italic;
+  font-size: 2rem;
+  padding-top: 0.7rem;
+  text-shadow: 1px 2px 2px #bf3330;
+  font-weight: 200;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing-p 1s 2s steps(12) forwards;
+}
+
+
+
+@keyframes typing-p {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 15ch; /* Фиксируем конечное состояние */
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.main-title-project {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  color: var(--font-color-white);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.project-main-section {
+  background-color: #220226;
+  border-top: var(--border-top-transparent);
+  border-image: var(--border-image-line);
+  border-image-slice: 1;
+}
+
+#project-section {
+  padding-top: 2rem;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 45vw);
+  justify-content: space-around;
+  row-gap: 2rem;
+}
+
+.container-a {
+  background: linear-gradient(
+      to right top,
+      var(--color-red),
+      #4c10ae,
+      var(--color-red),
+      #4c10ae
+    )
+    border-box;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-project);
+  box-shadow: 7px 10px 7px #913f7f7a;
+  padding: 2px;  
+}
+
+.mark {
+    font-size: 1.5rem;
+    color: transparent;
+    transition: color 0.7s ease-in-out;
+}
+
+.container-a:hover .mark {
+    color: #e26b26;
+}
+
+img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-top-left-radius: var(--border-radius-project);
+  border-top-right-radius: var(--border-radius-project);
+  display: block;
+  text-align: center;
+}
+
+.project-tile {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #53253f;
+  color: var(--font-color-white);
+  border-bottom-left-radius: var(--border-radius-project);
+  border-bottom-right-radius: var(--border-radius-project);
+  font-size: 1.3rem;
+}
+
+.container-show-all {
+  margin-top: 5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.right-arrow {
+  display: inline-block;
+  font-size: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 2rem;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+    color 0.7s ease-out;
+}
+
+.show-all-a:hover .right-arrow {
+  transform: translateX(10px);
+  color: var(--color-red);
+}
+
+.show-all-a {
+  padding: 0.7rem 0 0.7rem 2rem;
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+      to right top,
+      var(--color-red),
+      #4c10ae,
+      var(--color-red),
+      #4c10ae
+    )
+    1;
+  border-image-slice: 1;
+  color: var(--font-color-white);
+}
+
+.right-arrow::after {
+  content: '›';
+}
+
+.contact-me {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: var(--border-top-transparent);
+  border-image: var(--border-image-line);
+  border-image-slice: 1;
+  background-image: linear-gradient(to bottom right, #3a3d40 0%, #070708 100%);
+  color: var(--font-color-white);
+  padding-bottom: 5rem;
+}
+
+.work-together {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.coffee-under {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.coffee-brake-list {
+    width: 75vw;
+    margin: 2rem auto 0;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.coffee-brake-list li {
+    font-size: 2rem;
+    transition: transform 0.4s ease-out;
+}
+
+.coffee-brake-list li:hover {
+    transform: translateY(10px);
+}
+
+svg {
+    width: 2rem;
+    height: auto;
+    fill: white
+}
+
+
+footer {
+  width: 100%;
+  padding: 5rem;
+  background-color: #220226;
+  font-size: 1.3rem;
+  color: var(--font-color-white);
+  border-top: var(--border-top-transparent);
+  border-image: var(--border-image-line);
+  border-image-slice: 1;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+@media screen and (width < 1195px) {
+    .coffee-brake-list li {
+        font-size: 1.5rem;
+    }
+
+    svg { 
+        width: 1.5rem;
+    }
+}
+
+@media screen and (width < 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    #welcome-section > p {
+        font-size: 1.3rem;
+    }
+
+    .main-title-project {
+        font-size: 1.5rem;
+    }
+
+    #project-section {
+        grid-template: repeat(6, 1fr) / 80vw;
+        justify-content: space-around;
+        row-gap: 2rem;
+      }
+
+    .coffee-brake-list li {
+        font-size: 1.2rem;
+    }
+
+    svg { 
+        width: 1.2rem;
+    }  
+
+    .work-together {
+        font-size: 2rem;
+    }
+
+    .coffee-under {
+        font-size: 0.8rem;
+    }
+
+    .coffee-brake-list {
+        width: 90vw;
+    }
+}
