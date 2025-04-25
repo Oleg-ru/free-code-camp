@@ -40,3 +40,12 @@ ooooooo
  ooooooo
 ooooooooo
 */
+
+//code for test to site
+// function pyramid(char, countLetter, isTop) {
+//     let resultPyramid = [];
+//     for(let i = 0, j = 1; i < countLetter; i++, j+=2) {
+//         resultPyramid.push(`${" ".repeat(i)}${char.repeat(countLetter * 2 - (resultPyramid.length === 0 ? 1 : j))}`);
+//     }
+//     return `\n${isTop ? resultPyramid.join("\n") : resultPyramid.reverse().join("\n")}\n`;   
+// }
