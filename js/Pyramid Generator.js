@@ -1,17 +1,17 @@
 function pyramid(char, countLetter, isTop) {
-    let resultPyramid = [];
-    for (let i = 0, j = 1; i < countLetter; i++, j += 2) {
-      if (isTop) {
-        resultPyramid.push(`${' '.repeat(countLetter - i - 1)}${char.repeat(j)}`);
-      } else {
-        resultPyramid.push(`${' '.repeat(i)}${char.repeat(countLetter * 2 - j)}`);
-      }
+  let resultPyramid = [];
+  for (let i = 0, j = 1; i < countLetter; i++, j += 2) {
+    if (isTop) {
+      resultPyramid.push(`${' '.repeat(i)}${char.repeat(countLetter * 2 - j)}`);
+    } else {
+      resultPyramid.push(`${' '.repeat(countLetter - i - 1)}${char.repeat(j)}`);
     }
-  
-    return `\n${resultPyramid.join('\n')}\n`;
   }
-  
-  console.log(pyramid('o', 3, false));
+
+  return `\n${resultPyramid.join('\n')}\n`;
+}
+
+console.log(pyramid('o', 3, false));
 
 //Старый код:
 
@@ -40,12 +40,3 @@ ooooooo
  ooooooo
 ooooooooo
 */
-
-//code for test to site
-// function pyramid(char, countLetter, isTop) {
-//     let resultPyramid = [];
-//     for(let i = 0, j = 1; i < countLetter; i++, j+=2) {
-//         resultPyramid.push(`${" ".repeat(i)}${char.repeat(countLetter * 2 - (resultPyramid.length === 0 ? 1 : j))}`);
-//     }
-//     return `\n${isTop ? resultPyramid.join("\n") : resultPyramid.reverse().join("\n")}\n`;   
-// }
