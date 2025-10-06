@@ -1,43 +1,11 @@
 let count = 0;
 
 function cc(card) {
-    switch (card) {
-        case 2:
-            count++;
-            break;
-        case 3:
-            count++;
-            break;
-        case 4:
-            count++;
-            break;
-        case 5:
-            count++;
-            break;
-        case 6:
-            count++;
-            break;
-        case 7:
-            break;
-        case 8:
-            break;
-        case 9:
-            break;
-        case 10:
-            count--;
-            break;
-        case 'J':
-            count--;
-            break;
-        case 'Q':
-            count--;
-            break;
-        case 'K':
-            count--;
-            break;
-        case 'A':
-            count--;
-            break;
+    if (card === 2 || card === 3 || card === 4 || card === 5 || card === 6) {
+        count++;
+    } else if (card === 7 || card === 8 || card === 9) {
+    } else if (card === 10 || card === 'J' || card === 'Q' || card === 'K' || card === 'A') {
+        count--;
     }
     return `${count} ${count > 0 ? 'Bet' : 'Hold'}`
 }
