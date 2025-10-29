@@ -23,4 +23,4 @@ function pairElement(dnk) {
     return doubleHelix;
 }
 
-//console.log(pairElement("ATCGA"));
+//console.log(pairElement("ATCGA"))
