@@ -20,4 +20,5 @@ const formatDateLong = (date) => {
 }
 
 console.log(formatDateMMDDYYYY(currentDate));
+
 console.log(formatDateLong(currentDate));
