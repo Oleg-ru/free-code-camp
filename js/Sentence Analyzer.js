@@ -35,4 +35,5 @@ function getWordCount(sentence) {
 }
 
 const punctuationCount = getPunctuationCount('WHAT?!?!?!?!?');
+
 console.log(`Punctuation Count: ${punctuationCount}`);
