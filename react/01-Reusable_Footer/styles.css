@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    color: white;
+    background-color: #222233;
+    font-size: 20px;
+}
+
+.top-section {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-item {
+    list-style: none;
+    margin: 7px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    color: dimgrey;
+}
+
+.bottom-section {
+    font-size: 30px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.bottom-section a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.link {
+    text-decoration: none;
+}
