@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8cd9b3;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#otp-title {
+    margin-top: 3rem;
+}
+
+#otp-display {
+    padding: 1rem;
+}
+
+#otp-timer {
+}
+
+#generate-otp-button {
+    margin-top: 1rem;
+    padding: 10px 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 171, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+}
+
+#generate-otp-button:disabled {
+    cursor: wait;
+    background-color: rgba(74, 74, 74, 10%);
+}
