@@ -11,21 +11,42 @@ export function CurrencyConverter() {
 
     const valuteCodes = Object.keys(valuteMapping);
 
-    const convertDirect = (amount, from, to) => {
-        return amount * (valuteMapping[to] / valuteMapping[from]);
-    }
+    const [amount, setAmount] = useState(1);
+    const [fromCode, setFromCode] = useState(valuteCodes[0]);
+    const [toCode, setToCode] = useState(valuteCodes[1]);
+
+    const allConvertedAmounts = useMemo(() => {
+        const result = {};
+        valuteCodes.forEach(currency => {
+            result[currency] = amount * (valuteMapping[currency] / valuteMapping[fromCode]);
+        });
+        return result;
+    }, [amount, fromCode]);
+
+    const resultConvert = allConvertedAmounts[toCode];
+
+    console.log(allConvertedAmounts)
+
+    const handleChangeAmount = (e) => setAmount(Number(e.target.value));
+    const handleChangeFromValute = (e) => setFromCode(e.target.value);
+    const handleChangeToValute = (e) => setToCode(e.target.value);
     
     return (
-        <div>
-            <input type="number" min="0"/>
-            <select name="from-valute">
-                {valuteCodes.map(code => <option>{code}</option>)}
+        <div className='container'>
+            <h1 className="title">Currency Converter</h1>
+            <p className='coverted-codes'>{fromCode} to {toCode} Conversion</p>
+            <input className="amount" type="number" min="0" onChange={handleChangeAmount} value={amount}/>
+
+            <select className="select" name="from-valute" onChange={handleChangeFromValute} value={fromCode}>
+                {valuteCodes.map(code => <option key={code} value={code}>{code}</option>)}
             </select>
-            <select name="to-valute">
-                {valuteCodes.map(code => <option>{code}</option>)}
+
+            <select className="select" name="to-valute" onChange={handleChangeToValute} value={toCode}>
+                {valuteCodes.map(code => <option key={code} value={code}>{code}</option>)}
             </select>
+
             <div>
-                <p>Converted Amount: {0}</p>
+                <p className="result-conver">Converted Amount: {resultConvert.toFixed(2)} {toCode}</p>
             </div>
         </div>
     )

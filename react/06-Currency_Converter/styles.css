@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    background-color: #bb99ff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #2e0571;
+    color: #230051;
+}
+
+.title {
+    text-align: center;
+}
+
+.coverted-codes {
+    text-align: center;
+}
+
+
+.select, .amount {
+    padding: 3px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.result-conver {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-size: 1.5rem;
+}
