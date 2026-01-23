@@ -1,0 +1,12 @@
+.cell-container {
+    width: 30vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+}
