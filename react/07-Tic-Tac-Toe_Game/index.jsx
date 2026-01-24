@@ -1,6 +1,5 @@
 const { useState, useEffect } = React;
 
-
 const Cell = ({value, index, handleClick}) => {
     return (
         <button className="square" onClick={(e) => handleClick(e, index)} disabled={value}>
